@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+
+
+
+  <h1>Share your thoughts!</h1>
+  <form action="/submit" method="POST">
+    <label for="thought">Thought</label>
+    <input type="text" id="thought" name="thought" required><br><br>
+    <label for="name">Your name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    <input type="submit" value="Submit">
+  </form>
+  <form action="/delete" method="POST">
+    <button>Delete Everything</button>
+  </form>
+
+    <ul>
+        <% locals.data.forEach((text)=> { %> 
+        <li>
+          <%=text %>
+        </li>
+        <%}) %>
+    </ul>
+
+
+
+  <div>
+    <h3><%= locals.text%></h3>
+    <p><%= locals.name%></p>
+    <p><%= locals.date%></p>
+  </div>
+
+<%- include("partials/footer.ejs") %>
