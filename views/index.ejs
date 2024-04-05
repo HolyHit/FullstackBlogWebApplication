@@ -14,20 +14,20 @@
     <button>Delete Everything</button>
   </form>
 
+  <% if (locals.input) {%>
     <ul>
-        <% locals.data.forEach((text)=> { %> 
-        <li>
-          <%=text %>
-        </li>
+
+        <% locals.input.forEach((currentInput)=> { %>
+      <li>
+        <%=currentInput.text %>
+        <%=currentInput.name %>
+        <%=currentInput.date %>
+      </li>
         <%}) %>
+
     </ul>
+<% }%>
 
 
-
-  <div>
-    <h3><%= locals.text%></h3>
-    <p><%= locals.name%></p>
-    <p><%= locals.date%></p>
-  </div>
 
 <%- include("partials/footer.ejs") %>
