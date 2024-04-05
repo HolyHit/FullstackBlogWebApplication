@@ -37,3 +37,9 @@ footer {
   position: absolute;
   bottom: 0;
 }
+
+ul {
+  border: solid;
+  border-color: white;
+  border-radius: 5px;
+}

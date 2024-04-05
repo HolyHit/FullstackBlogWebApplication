@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/submit", (req, res) => {
-  if (fs.existsSync("data/URL.json")) {
+  if (fs.existsSync("data/URL.jsons")) {
     fs.readFile("data/URL.json", (err, data) => {
       if (err) {
         console.log(err);
